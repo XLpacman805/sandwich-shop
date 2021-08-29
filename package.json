@@ -1,0 +1,20 @@
+{
+  "name": "sandwich-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:frontend": "firebase deploy --only hosting"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XLpacman805/sandwich-shop.git"
+  },
+  "author": "Johnny Meza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XLpacman805/sandwich-shop/issues"
+  },
+  "homepage": "https://github.com/XLpacman805/sandwich-shop#readme"
+}
