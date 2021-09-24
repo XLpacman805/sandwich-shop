@@ -11,9 +11,6 @@
     "deploy:frontend:storybook": "npm --prefix ./frontend/ run deploy-storybook",
     "deploy:frontend": "npm run deploy:frontend:storybook && firebase deploy --only hosting"
   },
-  "dependencies": {
-    "frontend": "file:../frontend"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/XLpacman805/sandwich-shop.git"
