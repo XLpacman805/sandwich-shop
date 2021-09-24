@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:frontend": "firebase deploy --only hosting"
+    "test": "CI=true npm run test:frontend",
+    "build": "npm run build:frontend",
+    "test:frontend": "npm --prefix ./frontend/ run test",
+    "build:frontend": "npm --prexfix ./frontend/ run build",
+    "deploy:frontend:storybook": "npm --prefix ./frontend/ run deploy-storybook",
+    "deploy:frontend": "npm run deploy:frontend:storybook && firebase deploy --only hosting"
   },
   "repository": {
     "type": "git",
