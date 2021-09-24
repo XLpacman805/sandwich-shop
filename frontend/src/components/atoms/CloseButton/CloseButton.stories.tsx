@@ -1,11 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import CloseButton from './CloseButton';
-import propTypes from './propTypes';
+import propTypes from './CloseButton.types';
 
 export default {
+    title: 'Atoms/CloseButton',
     component: CloseButton,
-    title: 'Close Button'
 } as ComponentMeta<typeof CloseButton>;
 
 const Template: ComponentStory<typeof CloseButton> = (args: propTypes) => <CloseButton {...args} />;

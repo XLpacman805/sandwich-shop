@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import propTypes from './propTypes';
+import propTypes from './CloseButton.types';
 
 const Button = styled.button<propTypes>`
     background-color: ${props => (props ? props.defaultBackgroundColor : "#fffffff")};
