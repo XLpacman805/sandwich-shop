@@ -34,7 +34,7 @@ const Template: ComponentStory<typeof AddToBagButton> = (args: props) => {
 export const Default = Template.bind({});
 Default.args = {
     props: {
-        text: 'Add to bag',
+        text: 'Add to Bag',
         price: 10.00,
         onClick: () => {console.log('clicked')},
     },

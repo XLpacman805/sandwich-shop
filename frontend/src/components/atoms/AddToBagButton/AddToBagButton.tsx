@@ -7,8 +7,11 @@ const Button = styled.button<any>(( props: styleProps) => {
     return {
         width: '100%',
         height: 'auto',
-        padding: '8% 5%',
+        padding: '8%',
         backgroundColor: props.backgroundColor,
+        borderRadius: '5px',
+        border: 'none',
+        boxShadow: '0px 2px 2px 0px rgba(0,0,0,0.75)',
         color: props.color,
         display: 'flex',
         justifyContent: 'space-between',

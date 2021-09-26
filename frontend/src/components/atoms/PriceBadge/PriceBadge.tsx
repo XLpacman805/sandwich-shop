@@ -13,6 +13,7 @@ const Badge = styled.h3<any>`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: inherit;
 `;
 
 const PriceBadge = (props: propTypes) => {
