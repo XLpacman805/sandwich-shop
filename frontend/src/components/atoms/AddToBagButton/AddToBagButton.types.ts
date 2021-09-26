@@ -4,7 +4,8 @@ export interface propTypes {
     onClick: React.MouseEventHandler<HTMLButtonElement>,
     price: number,
     text?: string,
-    dataTestId?: string
+    dataTestId?: string,
+    disabled?: boolean,
 }
 
 export interface styleProps {

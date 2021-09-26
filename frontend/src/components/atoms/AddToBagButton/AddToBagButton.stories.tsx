@@ -14,7 +14,10 @@ const Section = styled.section`
 `;
 
 const ButtonContainer = styled.div<any>`
-    width: 16vw;
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 16vw;
+    }
 `;
 
 export default {
@@ -37,6 +40,18 @@ Default.args = {
         text: 'Add to Bag',
         price: 10.00,
         onClick: () => {console.log('clicked')},
+        disabled: false,
+    },
+    styleProps: styleDefaults,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    props: {
+        text: 'Add to Bag',
+        price: 10.00,
+        onClick: () => {console.log('clicked')},
+        disabled: true,
     },
     styleProps: styleDefaults,
 };

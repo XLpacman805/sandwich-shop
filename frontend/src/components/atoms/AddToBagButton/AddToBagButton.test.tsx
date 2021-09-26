@@ -101,3 +101,21 @@ describe('AddToBagButton', () => {
         expect(props.props.onClick).toHaveBeenCalledTimes(1);
     });
 });
+
+// Disables the AddToBagButton component when the disabled prop is passed
+describe('AddToBagButton', () => {
+    const props: AddToBagProps = {
+        props: {
+            dataTestId: 'add-to-bag-button-test-id',
+            price: 12.99,
+            text: 'Add to Super Bag',
+            onClick: jest.fn(() => console.log('add-to-bag-clicked')),
+            disabled: true
+        }
+    };
+
+    it('disables the AddToBagButton component when the disabled prop is passed', () => {
+        render(<AddToBagButton {...props} />);
+        expect(screen.getByTestId('add-to-bag-button-test-id')).toBeDisabled();
+    });
+});

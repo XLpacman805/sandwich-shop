@@ -20,11 +20,11 @@ const Button = styled.button<any>(( props: styleProps) => {
             backgroundColor: props.disabledBackgroundColor,
             color: props.disabledColor,
         },
-        '&:hover, &:focus': {
+        '&:hover:enabled, &:focus:enabled': {
             backgroundColor: props.hoverBackgroundColor,
             color: props.hoverColor,
         },
-        '&:active': {
+        '&:active:enabled': {
             backgroundColor: props.activeBackgroundColor,
             color: props.activeColor,
         },
@@ -35,10 +35,10 @@ const Button = styled.button<any>(( props: styleProps) => {
 });
 
 const AddToBagButton = (props: props) => {
-    const { dataTestId, text = "Add to Bag", price, onClick } = props.props;
+    const { dataTestId, text = "Add to Bag", price, onClick, disabled = false } = props.props;
     const styles = props.styleProps || styleDefaults;
     return (
-        <Button {...styles} data-testid={dataTestId} onClick={onClick}>
+        <Button {...styles} data-testid={dataTestId} onClick={onClick} disabled={disabled}>
             <span className="text">{text}</span>
             <span className="price">{format(price)}</span>
         </Button>
