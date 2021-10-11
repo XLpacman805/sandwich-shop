@@ -16,7 +16,7 @@ const Section = styled.section`
 const Container = styled.div<any>`
     width: 100%;
     @media (min-width: 768px) {
-        width: 16vw;
+        width: 12vw;
     }
 `;
 
