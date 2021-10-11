@@ -5,10 +5,4 @@ export default interface propTypes {
     initialValue: number,
     maximum: number,
     minumum: number,
-    styleProps?: styleProps,
-
-}
-
-export interface styleProps {
-    backgroundColor: string,
 }
