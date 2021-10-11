@@ -6,6 +6,8 @@ const QuantitySelector = (props: propTypes) => {
     const isIncrementDisabled = () => quantity === props.maximum;
     const isDecrementDisabled = () => quantity === props.minumum;
 
+    // Need to add styling
+
     return (
         <div data-testid="quantity-selector-test-id">
             <span className="label">{props.label}</span>
