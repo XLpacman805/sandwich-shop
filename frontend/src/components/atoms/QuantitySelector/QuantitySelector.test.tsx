@@ -9,6 +9,8 @@ describe('QuantitySelector', () => {
         const props: propTypes = {
             label: 'Quantity',
             initialValue: 1,
+            minumum: 1,
+            maximum: 1
         }
 
         render(<QuantitySelector {...props} />);
@@ -40,6 +42,8 @@ describe('QuantitySelector buttons increment and decrement the displayValue onCl
         const props: propTypes = {
             label: 'Quantity',
             initialValue: 1,
+            minumum: 1,
+            maximum: 10
         }
         render(<QuantitySelector {...props} />);
         const quantitySelector = screen.getByTestId('quantity-selector-test-id');
@@ -56,6 +60,8 @@ describe('QuantitySelector buttons increment and decrement the displayValue onCl
         const props: propTypes = {
             label: 'Quantity',
             initialValue: 10,
+            minumum: 1,
+            maximum: 10,
         }
         render(<QuantitySelector {...props} />);
         const quantitySelector = screen.getByTestId('quantity-selector-test-id');
@@ -104,6 +110,30 @@ describe('Increment and Decrement buttons should be disabled to not exceed the m
         decrementButton?.click(); //quantity: 1 (MAX)
         decrementButton?.click();
         decrementButton?.click(); 
+        const qunatityDisplay : HTMLSpanElement | null = quantitySelector.querySelector('span.quantity-display');
+        expect(qunatityDisplay).toHaveTextContent('1');
+        jest.clearAllMocks();
+    });
+
+    it('both increment and decrement are disabled if min and max are the same.', () => {
+        const props: propTypes = {
+            label: 'Quantity',
+            initialValue: 1,
+            maximum: 1,
+            minumum: 1,
+        };
+
+        render(<QuantitySelector {...props} />);
+        const quantitySelector = screen.getByTestId('quantity-selector-test-id');
+        const decrementButton: HTMLButtonElement | null = quantitySelector.querySelector('button.decrement-button');
+        decrementButton?.click(); //quantity: 1 (MAX)
+        decrementButton?.click();
+        decrementButton?.click();
+        decrementButton?.click();
+
+        const incrementButton: HTMLButtonElement | null = quantitySelector.querySelector('button.increment-button');
+        incrementButton?.click();
+
         const qunatityDisplay : HTMLSpanElement | null = quantitySelector.querySelector('span.quantity-display');
         expect(qunatityDisplay).toHaveTextContent('1');
         jest.clearAllMocks();
