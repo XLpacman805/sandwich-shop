@@ -34,7 +34,7 @@ const QuantityDisplay = styled.span`
 padding: 0px 15px;
 `;
 
-const QuantitySelector = (props: propTypes) => {
+const QuantitySelector = (props: propTypes): JSX.Element => {
     const [quantity, setQuantity] = useState(props.initialValue || 1);
     const isIncrementDisabled = () => quantity === props.maximum;
     const isDecrementDisabled = () => quantity === props.minumum;

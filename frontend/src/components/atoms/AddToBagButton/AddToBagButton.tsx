@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { props, styleProps, styleDefaults } from './AddToBagButton.types';
 import { format } from '../../../util/CurrencyHelper';
 
+/* eslint-disable @typescript-eslint/no-explicit-any*/
 const Button = styled.button<any>(( props: styleProps) => {
     return {
         width: '100%',
@@ -34,7 +35,7 @@ const Button = styled.button<any>(( props: styleProps) => {
     }
 });
 
-const AddToBagButton = (props: props) => {
+const AddToBagButton = (props: props): JSX.Element => {
     const { dataTestId, text = "Add to Bag", price, onClick, disabled = false } = props.props;
     const styles = props.styleProps || styleDefaults;
     return (

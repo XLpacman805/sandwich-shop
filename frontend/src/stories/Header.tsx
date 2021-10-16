@@ -4,13 +4,13 @@ import { Button } from './Button';
 import './header.css';
 
 interface HeaderProps {
-  user?: {};
+  user?: unknown;
   onLogin: () => void;
   onLogout: () => void;
   onCreateAccount: () => void;
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps): JSX.Element => (
   <header>
     <div className="wrapper">
       <div>

@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta  } from '@storybook/react';
 import PriceBadge from './PriceBadge';
 import PriceBadgeProps from './PriceBadge.types';
 
-const Container = styled.div<any>`
+const Container = styled.div`
     width: 6rem;
     height: 6rem;
     background-color: white;

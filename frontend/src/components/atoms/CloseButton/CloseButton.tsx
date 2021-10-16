@@ -31,7 +31,7 @@ const Button = styled.button<propTypes>`
 `;
 
 //create a functional component
-const CloseButton = (props : propTypes) => {
+const CloseButton = (props : propTypes) : JSX.Element => {
     // return a button
     return (
         <Button data-testid={props.dataTestId} 

@@ -13,7 +13,7 @@ const Section = styled.section`
     height: 90vh;
 `;
 
-const Container = styled.div<any>`
+const Container = styled.div`
     width: 100%;
     @media (min-width: 768px) {
         width: 12vw;

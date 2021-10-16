@@ -22,7 +22,8 @@ describe('AddToBagButton', () => {
 
 //renders the price prop in the AddToBagButton component as a string
 describe('AddToBagButton', () => {
-    let props: any = {
+    /* eslint-disable @typescript-eslint/no-explicit-any*/
+    const props: any = {
         props: {
             dataTestId: 'add-to-bag-button-test-id',
             text: 'Add to Bag',
@@ -38,14 +39,14 @@ describe('AddToBagButton', () => {
 
     it('renders the price prop in the AddToBagButton component as "$0.01"', () => {
         const newProps = {...props};
-        newProps.props.price = 0.0100001;; 
+        newProps.props.price = 0.0100001;
         render(<AddToBagButton {...newProps} price={0.0100001} />);
         expect(screen.getByTestId('add-to-bag-button-test-id')).toHaveTextContent('$0.01');
     });
 
     it('renders the price prop in the AddToBagButton component as "$8"', () => {
         const newProps = {...props};
-        newProps.props.price = 8.000001;;
+        newProps.props.price = 8.000001;
         render(<AddToBagButton {...newProps} />);
         expect(screen.getByTestId('add-to-bag-button-test-id')).toHaveTextContent('$8');
     });

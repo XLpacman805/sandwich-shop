@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { screen, render } from '@testing-library/react';
 import QuantitySelector from './QuantitySelector';
 import propTypes from './QuantitySelector.types';

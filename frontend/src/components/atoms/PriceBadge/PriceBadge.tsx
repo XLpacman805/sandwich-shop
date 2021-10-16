@@ -3,7 +3,7 @@ import styled from "styled-components";
 import propTypes from "./PriceBadge.types";
 import { format } from '../../../util/CurrencyHelper';
 
-const Badge = styled.h3<any>`
+const Badge = styled.h3`
     background-color: whitesmoke;
     color: black;
     padding: 0.5rem;
@@ -16,7 +16,7 @@ const Badge = styled.h3<any>`
     font-family: inherit;
 `;
 
-const PriceBadge = (props: propTypes) => {
+const PriceBadge = (props: propTypes): JSX.Element => {
     const { price, currency, locale, dataTestId } = props;
     return (
         <Badge data-testid={dataTestId}>

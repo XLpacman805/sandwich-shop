@@ -1,6 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event'
+import { render, screen } from '@testing-library/react';
 import CloseButton from './CloseButton';
 
 test('renders CloseButton element', () => {
@@ -10,7 +9,7 @@ test('renders CloseButton element', () => {
 });
 
 test ('renders CloseButton element with multiplication sign', () => {
-  render(<CloseButton dataTestId="close-button">Close</CloseButton>);
+  render(<CloseButton dataTestId="close-button"></CloseButton>);
   const closeButtonElement = screen.getByTestId("close-button");
   expect(closeButtonElement).toHaveTextContent("×");
 });

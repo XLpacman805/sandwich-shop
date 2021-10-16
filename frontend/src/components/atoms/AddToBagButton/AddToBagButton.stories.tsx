@@ -13,7 +13,7 @@ const Section = styled.section`
     height: 90vh;
 `;
 
-const ButtonContainer = styled.div<any>`
+const ButtonContainer = styled.div`
     width: 100%;
     @media (min-width: 768px) {
         width: 16vw;

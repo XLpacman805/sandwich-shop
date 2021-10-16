@@ -13,7 +13,7 @@ export const getCurrencySymbol = (currency: string): string => {
 }
 
 // format the number to a currency. Will need to be updated to handle different currencies other than USD.
-export const format = (amount: number, currency: string = 'USD', locale: string = 'en-US'): string => {
+export const format = (amount: number, currency = 'USD', locale = 'en-US'): string => {
     return new Intl.NumberFormat(locale, {
         style: 'currency',
         currency: currency
