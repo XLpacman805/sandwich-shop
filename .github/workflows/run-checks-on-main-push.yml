@@ -1,0 +1,12 @@
+name: "Main - Build Test"
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  frontend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci && cd ./frontend && npm ci
+      - uses: ./.github/actions/frontend-tests
