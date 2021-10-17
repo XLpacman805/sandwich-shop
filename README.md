@@ -1,4 +1,6 @@
-# sandwich-shop
+# Sandwich Shop - Food Ordering Clone
+
+[![Main - Build Test](https://github.com/XLpacman805/sandwich-shop/actions/workflows/run-checks-on-main-push.yml/badge.svg)](https://github.com/XLpacman805/sandwich-shop/actions/workflows/run-checks-on-main-push.yml)
 
 Fullstack web application using React Typescript, Storybook, and Google Firebase. 
 
