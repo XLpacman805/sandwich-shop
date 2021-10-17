@@ -9,11 +9,15 @@ const Button = styled.button<propTypes>`
     border-radius: 50%;
     width: 30px;
     height: 30px;
-
+    font-family: inherit;
+    position: relative;
 
     &> span {
         font-size: x-large;
         margin: auto;
+        position: absolute;
+        top: -2px;
+        left: 8px;
     }
 
     &:hover,
@@ -27,7 +31,7 @@ const Button = styled.button<propTypes>`
 `;
 
 //create a functional component
-const CloseButton = (props : propTypes) => {
+const CloseButton = (props : propTypes) : JSX.Element => {
     // return a button
     return (
         <Button data-testid={props.dataTestId} 

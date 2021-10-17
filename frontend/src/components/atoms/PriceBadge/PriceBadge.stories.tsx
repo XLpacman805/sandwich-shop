@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { ComponentStory, ComponentMeta  } from '@storybook/react';
 import PriceBadge from './PriceBadge';
 import PriceBadgeProps from './PriceBadge.types';
-import { white } from 'color-name';
 
-const Container = styled.div<any>`
+const Container = styled.div`
     width: 6rem;
     height: 6rem;
     background-color: white;

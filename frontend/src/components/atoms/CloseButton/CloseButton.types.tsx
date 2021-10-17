@@ -4,5 +4,5 @@ export default interface propTypes {
     defaultColor?: string;
     altBackgroundColor?: string;
     altColor?: string;
-    onClick?: any;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }

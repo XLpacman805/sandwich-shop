@@ -21,12 +21,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:help": "react-scripts test --help",
+    "test:ci": "react-scripts test --ci --coverage --watchAll=false",
     "help": "react-scripts",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
-    "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch \"main\" -t \"repoToken\""
+    "deploy-storybook:ci": "storybook-to-ghpages --ci --source-branch \"main\" -t \"repoToken\"",
+    "eslint": "eslint src/**"
   },
   "eslintConfig": {
     "extends": [
@@ -65,6 +68,8 @@
     "@storybook/react": "^6.3.8",
     "@storybook/storybook-deployer": "^2.8.10",
     "@testing-library/dom": "^8.2.0",
-    "@types/styled-components": "^5.1.13"
+    "@types/styled-components": "^5.1.13",
+    "eslint": "^7.32.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1"
   }
 }
